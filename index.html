@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Registrasi dan List Pendaftar</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+  <div class="card" id="pageheader">
+    <div class="card-body">
+      Daftar Anggota Form and Table <br> <br>
+      Made by: Diamond <br>
+      Techstack: HTML/CSS, Javascript<br>
+    </div>
+  </div>
+
+  <div class="card" id="registrationCard">
+    <h2>Registrasi</h2>
+    <form id="registrationForm">
+      <label for="name">Nama:</label><br>
+      <input type="text" id="name" name="name" required minlength="10" oninput="validateNameInput(this)" placeholder="Wajib"><br>
+      <label class="input-label">Masukkan Nama, minimal 10 karakter</label><br><br>
+
+      <label for="age">Umur:</label><br>
+      <input type="text" id="age" name="age" min="25" max="200" placeholder="Wajib"><br>
+      <label class="input-label">Pastikan Memiliki Umur Minimal 25</label><br><br>
+
+      <label for="savings">Uang Sangu (Rp):</label><br>
+      <input type="text" id="savings" name="savings" required min="100000" max="1000000" placeholder="Wajib"><br>
+      <label class="input-label">Pastikan Uang Sangu Minimal 100 Ribu dan Maksimal 1 Juta</label><br><br>
+
+      <button type="button" onclick="submitForm()">Submit</button>
+    </form>
+  </div>
+
+  <div class="card" id="listCard">
+    <h2>List Pendaftar</h2>
+    <table id="applicantTable"></table><br>
+    <div id="averageInfo"></div>
+  </div>
+
+  <div id="overlay" class="overlay">
+    <div class="loading-spinner"></div>
+  </div>
+
+  <script src="script.js"></script>
+
+</body>
+
+</html>
