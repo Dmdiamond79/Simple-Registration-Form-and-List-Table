@@ -1,0 +1,6 @@
+Feature:
+- CRUD Operation on Registrasi and list pendaftar
+- Async action while submitting the form
+- Form input is very restrictive and good
+- Glassmorphism Design
+- using Local Storage to Store Data
